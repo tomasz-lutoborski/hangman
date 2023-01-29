@@ -2,7 +2,7 @@ import englishWords from "./assets/words/english.json";
 import polishWords from "./assets/words/polish.json";
 import { Language } from "./types";
 
-export function getRandomWordOfSpecifiedLenght(
+export function getRandomWordOfSpecifiedLength(
   length: number,
   language: Language
 ): string {

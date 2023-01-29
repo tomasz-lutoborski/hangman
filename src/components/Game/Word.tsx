@@ -1,11 +1,23 @@
 import LetterInset from "./LetterInset";
 import styles from "./Word.module.css";
 
-export default function Word({ word }: { word: string[] }) {
+interface WordProps {
+  word: string[];
+  visibleLetters: number[];
+}
+
+export default function Word(props: WordProps) {
   return (
     <div className={styles.word}>
-      {word.map((letter, index) => {
-        return <LetterInset letter={letter} index={index} key={index} />;
+      {props.word.map((letter, index) => {
+        return (
+          <LetterInset
+            letter={letter}
+            index={index}
+            key={index}
+            visible={props.visibleLetters.includes(index)}
+          />
+        );
       })}
     </div>
   );

@@ -2,6 +2,31 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+:root {
+  --mobile: 320px;
+  --table: 650px;
+  --laptop: 980px;
+  --desktop: 1300px;
+  font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    font-size: 10px;
+  }
+}
 
 html,
 body,
@@ -92,6 +117,7 @@ video {
   vertical-align: baseline;
 }
 
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -109,6 +135,7 @@ section {
 
 body {
   line-height: 1;
+  font-family: 'Nunito', sans-serif;
 }
 
 ol,

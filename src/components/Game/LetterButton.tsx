@@ -1,13 +1,17 @@
 import styles from "./LetterButton.module.css";
-function LetterButton({ letter }: { letter: string }) {
+
+interface LetterButtonProps {
+  letter: string;
+  onClick: (letter: string) => void;
+}
+
+function LetterButton(props: LetterButtonProps) {
   return (
     <button
-      onClick={() => {
-        console.log(letter);
-      }}
+      onClick={() => props.onClick(props.letter)}
       className={styles.letterButton}
     >
-      {letter}
+      {props.letter}
     </button>
   );
 }
